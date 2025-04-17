@@ -13,7 +13,7 @@ class DataSource:
         Returns the connection object.'''
 
         try:
-            connection = psycopg2.connect(database=config.database, user=config.user, host="localhost")
+            connection = psycopg2.connect(database=config.database, user=config.user, password=config.password, host="localhost")
         except Exception as e:
             print("Connection error: ", e)
             exit()
