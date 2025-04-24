@@ -1,6 +1,6 @@
 import psycopg2
 
-import ProductionCode.psqlConfig as config
+import ProductionCode.psql_config as config
 
 class DataSource:
 
@@ -13,7 +13,7 @@ class DataSource:
         Returns the connection object.'''
 
         try:
-            connection = psycopg2.connect(database=config.database, user=config.user, password=config.password, host="localhost")
+            connection = psycopg2.connect(database=config.DATABASE, user=config.USER, password=config.PASSWORD, host="localhost")
         except Exception as e:
             print("Connection error: ", e)
             exit()
