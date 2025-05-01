@@ -10,7 +10,7 @@ class DataSource:
         self.connection = self.connect()
 
     def connect(self):
-        '''Initiates connection to database using information in the psqlConfig.py file.
+        '''Initiates connection to database using information in the psql_config.py file.
         Returns the connection object.'''
 
         try:
